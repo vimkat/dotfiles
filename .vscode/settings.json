@@ -1,0 +1,30 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // General Settings
+    "window.zoomLevel": 1,
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+
+    // Editor Settings
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "editor.lineNumbers": "relative",
+    "editor.fontFamily": "Menlo, 'Courier New', monospace",
+    "editor.fontSize": 12,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.cursorBlinking": "smooth",
+
+    // File Settings
+    "workbench.iconTheme": "vs-nomo-dark",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "node_modules": true
+    },
+
+    // VIM Settings
+    "vim.disableAnnoyingNeovimMessage": true
+}
