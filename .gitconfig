@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = Nils Weber
 	email = me@nilsweb.de
+[alias]
+	checkout-pr = "!f() { git fetch $1 pull/$2/head:PR-$2 && git checkout PR-$2; }; f"
