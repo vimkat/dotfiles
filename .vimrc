@@ -12,6 +12,7 @@ Plug 'ctrlpvim/ctrlp.vim'                                                     " 
 Plug 'vim-airline/vim-airline'                                                " VIM status line customization
 Plug 'vim-airline/vim-airline-themes'                                         " Themes for vim-airline
 Plug 'tpope/vim-fugitive'                                                     " GIT wrapper
+Plug 'christoomey/vim-tmux-navigator'                                         " Navigate tmux and vim panes more easily
 call plug#end()                                                               " End Plug
 
 
