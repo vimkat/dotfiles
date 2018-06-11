@@ -50,4 +50,6 @@ let g:airline_powerline_fonts = 1                                             " 
 let g:airline#extensions#branch#enabled = 1                                   " Enable branch showing
 let g:airline_section_x = ''                                                  " Clear section X (filetype)
 let g:airline_section_y = ''                                                  " Clear section Y (encoding)
+let g:airline_left_sep = ' '
+let g:airline_right_sep = ' '
 set noshowmode                                                                " Remove default mode indicator
