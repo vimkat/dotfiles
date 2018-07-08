@@ -5,3 +5,4 @@
 	email = me@nilsweb.de
 [alias]
 	checkout-pr = "!f() { git fetch $1 pull/$2/head:PR-$2 && git checkout PR-$2; }; f"
+	graph = log --oneline --graph --color
