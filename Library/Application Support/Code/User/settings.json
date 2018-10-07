@@ -1,0 +1,76 @@
+{
+  // ----- Visual Settings ----- //
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "vs-nomo-dark",
+  "editor.minimap.renderCharacters": false,
+
+
+
+  // ----- Editing Settings ----- //
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "on",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 25,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.cursorBlinking": "solid",
+  "editor.rulers": [120, 140],
+
+
+
+  // ----- VIM Settings ----- //
+  "vim.useSystemClipboard": true,
+
+
+  // Search
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true,
+
+
+  // Keyboard
+  "vim.leader": ",",
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Don't jump over wrapped lines
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] },          
+  ],
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // Exit insert mode with jk
+    { "before": ["j", "k"], "after": ["<Esc>"] },           
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Don't jump over wrapped lines
+    { "before": ["j"], "after": ["g", "j"] },               
+    { "before": ["k"], "after": ["g", "k"] },            
+  ],
+
+
+  // EasyMotion and Vim-Sneak
+  "vim.easymotion": true,
+  "vim.easymotionMarkerFontFamily": "Fira Code",
+  "vim.easymotionMarkerHeight": 25,
+  "vim.easymotionMarkerFontWeight": "bold",
+  "vim.easymotionMarkerBackgroundColor": "#1E1E1E",
+  "vim.sneak": true,
+
+
+
+  // ----- Explorer Settings ----- //
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.autoReveal": false,
+
+
+
+  // ----- File Settings ----- //
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+}
