@@ -58,6 +58,8 @@
   "vim.easymotionMarkerFontFamily": "Fira Code",
   "vim.easymotionMarkerHeight": 25,
   "vim.easymotionMarkerFontWeight": "bold",
+  "vim.easymotionMarkerForegroundColorOneChar": "red",
+  "vim.easymotionMarkerForegroundColorTwoChar": "orange",
   "vim.easymotionMarkerBackgroundColor": "#1E1E1E",
   "vim.sneak": true,
 
