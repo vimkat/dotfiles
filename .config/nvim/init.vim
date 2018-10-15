@@ -6,7 +6,7 @@
 
 " --- VIM-Plug --- "
 call plug#begin()                                                             " Start Plug
-Plug 'chriskempson/base16-vim'                                                " Base16 color schemes
+Plug 'dracula/vim', { 'as': 'dracula' }                                       " Dracula color scheme
 Plug 'scrooloose/nerdtree'                                                    " NERDTree file viewer
 Plug 'ctrlpvim/ctrlp.vim'                                                     " FuzzyFinder
 Plug 'vim-airline/vim-airline'                                                " VIM status line customization
@@ -17,13 +17,14 @@ call plug#end()                                                               " 
 
 
 " --- Visual settings --- "
-color base16-onedark                                                          " Use Base16's One Dark color theme.
+color dracula                                                                 " Use Dracula color theme.
 syntax on                                                                     " Use syntax highlighting.
+set termguicolors                                                             " Make colors look good.
 set cursorline                                                                " Highlight the current line.
 set showmatch                                                                 " Hightlight matching [{()}]
 set incsearch                                                                 " Search as characters are entered.
 set hlsearch                                                                  " Hightlight search matches.
-set number relativenumber                                                     " Show line numbers (absolute and relative).
+set number                                                                    " Show line numbers (absolute and relative).
 
 
 " --- Indentation settings --- "
@@ -31,13 +32,14 @@ set smartindent                                                               " 
 set shiftwidth=2                                                              " Number of spaces when indenting using >> or << (or when automatical indenting is used).
 set tabstop=2                                                                 " Number of visual spaces per tab (for files with <tab> characters).
 set softtabstop=2                                                             " Number of spaces when hitting the <tab> key in insert mode.
-set expandtab                                                                 " Use spaces instead of <tab>s
+set expandtab                                                                 " Use spaces instead of <tab>s.
 
 
 " --- System settings --- "
 set noswapfile                                                                " Don't use a vim swap file.
 set clipboard=unnamed                                                         " Use system clipboard.
-set ttimeoutlen=10                                                            " Remove delay when leaving insert mode
+set ttimeoutlen=10                                                            " Remove delay when leaving insert mode.
+set mouse=a                                                                   " Enable mouse support (yeah... I know...).
 
 
 " --- Keyboard Settings --- "
@@ -45,11 +47,11 @@ map <C-n> :NERDTreeToggle<CR>                                                 " 
 
 
 " --- Airline --- "
-let g:airline_theme = 'base16'                                                " Use base16 theme
-let g:airline_powerline_fonts = 1                                             " Enable Powerline symbols
-let g:airline#extensions#branch#enabled = 1                                   " Enable branch showing
-let g:airline_section_x = ''                                                  " Clear section X (filetype)
-let g:airline_section_y = ''                                                  " Clear section Y (encoding)
+let g:airline_theme = 'dracula'                                               " Use base16 theme.
+let g:airline_powerline_fonts = 1                                             " Enable Powerline symbols.
+let g:airline#extensions#branch#enabled = 1                                   " Enable branch showing.
+let g:airline_section_x = ''                                                  " Clear section X (filetype).
+let g:airline_section_y = ''                                                  " Clear section Y (encoding).
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
-set noshowmode                                                                " Remove default mode indicator
+set noshowmode                                                                " Remove default mode indicator.
