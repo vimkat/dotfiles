@@ -13,6 +13,8 @@ Plug 'vim-airline/vim-airline'                                                " 
 Plug 'vim-airline/vim-airline-themes'                                         " Themes for vim-airline
 Plug 'tpope/vim-fugitive'                                                     " GIT wrapper
 Plug 'christoomey/vim-tmux-navigator'                                         " Navigate tmux and vim panes more easily
+Plug 'easymotion/vim-easymotion'                                              " VIM EasyMotion
+Plug 'justinmk/vim-sneak'                                                     " VIM Sneak
 call plug#end()                                                               " End Plug
 
 
