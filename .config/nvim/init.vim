@@ -45,6 +45,7 @@ set mouse=a                                                                   " 
 
 
 " --- Keyboard Settings --- "
+let mapleader='ö'                                                             " Set <leader> key
 map <C-n> :NERDTreeToggle<CR>                                                 " Toggle NERDTree with Ctrl+N
 
 
