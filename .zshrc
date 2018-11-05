@@ -24,6 +24,7 @@ antigen bundle robbyrussell/oh-my-zsh lib/		        # Oh-My-ZSH core (contains m
 antigen bundle git					                          # Git integration
 antigen bundle ssh-agent				                      # Start ssh-agent
 antigen bundle zsh-users/zsh-syntax-highlighting	    # Enable syntax highlighting
+antigen bundle zsh-users/zsh-autosuggestions          # Fish-like autosuggestions
 antigen bundle lukechilds/zsh-nvm                     # Node version manager
 
 # Tell Antigen we're done.
