@@ -9,6 +9,10 @@
 # the additional ZSH configuration from the ~/.zsh folder.
 #
 
+# Set locales correctly
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Load all files from ~/.zsh/before
 if [ -d $HOME/.zsh/before ]; then
   for file in $HOME/.zsh/before/*.zsh; do
@@ -35,3 +39,4 @@ if [ -d $HOME/.zsh/after ]; then
     source $file
   done
 fi
+
