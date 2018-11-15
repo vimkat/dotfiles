@@ -19,6 +19,7 @@
   "editor.formatOnPaste": true,
   "editor.cursorBlinking": "solid",
   "editor.rulers": [120, 140],
+  "spellright.language": [ "de", "en" ],
 
 
 
