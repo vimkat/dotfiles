@@ -1,7 +1,7 @@
 {
   // ----- Visual Settings ----- //
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "vs-nomo-dark",
   "editor.minimap.renderCharacters": false,
 
@@ -18,8 +18,8 @@
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.cursorBlinking": "solid",
-  "editor.rulers": [120, 140],
-  "spellright.language": [ "de", "en" ],
+  "editor.rulers": [110, 120],
+  "editor.smoothScrolling": true,
 
 
 
@@ -76,4 +76,29 @@
   // ----- File Settings ----- //
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
+
+
+
+  // ----- Language Specific Settings ----- //
+
+  // TypeScript
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+
+
+  // JavaScript
+  "javascript.referencesCodeLens.enabled": true,
+
+
+  // Markdown
+  "[markdown]": {
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    }
+  },
 }
