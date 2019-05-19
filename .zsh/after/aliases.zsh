@@ -7,4 +7,5 @@ alias dl='cd ~/Downloads'
 alias dt='cd ~/Desktop'
 
 # Default overrides
+alias vim.old='/usr/bin/vim'
 alias vim='nvim'
