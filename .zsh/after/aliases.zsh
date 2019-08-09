@@ -9,3 +9,10 @@ alias dt='cd ~/Desktop'
 # Default overrides
 alias vim.old='/usr/bin/vim'
 alias vim='nvim'
+alias vi='vim'
+alias v='vi'
+
+# Handy shorthands
+alias mkdir='mkdir -p'
+alias cat='bat'
+alias rimraf='rm -rf'
