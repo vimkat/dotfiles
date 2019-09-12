@@ -14,20 +14,28 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()                                                             " Start Plug
+" Visual/Style features
 Plug 'dracula/vim', { 'as': 'dracula' }                                       " Dracula color scheme
 Plug 'vim-airline/vim-airline'                                                " VIM status line customization
 Plug 'vim-airline/vim-airline-themes'                                         " Themes for vim-airline
 
+" Utility features
 Plug 'scrooloose/nerdtree'                                                    " NERDTree file viewer
 Plug 'ctrlpvim/ctrlp.vim'                                                     " FuzzyFinder
 Plug 'tpope/vim-fugitive'                                                     " GIT wrapper
 Plug 'christoomey/vim-tmux-navigator'                                         " Navigate tmux and vim panes more easily
 
+" Editing features
 Plug 'easymotion/vim-easymotion'                                              " VIM EasyMotion
 Plug 'justinmk/vim-sneak'                                                     " VIM Sneak
 Plug 'tpope/vim-surround'                                                     " Support for editing surrounding text objects
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}            " LSP client
 
+" IDE-like features
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}            " LSP client
+Plug 'dense-analysis/ale'                                                     " Linting engine
+
+" Language-specific features
+Plug 'sheerun/vim-polyglot'                                                   " Language support for almost everything
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }                            " Awesome Golang support and tooling
 call plug#end()                                                               " End Plug
 
@@ -42,7 +50,7 @@ set incsearch                                                                 " 
 set hlsearch                                                                  " Hightlight search matches.
 set ignorecase                                                                " Ignore case when searching.
 set number relativenumber                                                     " Show line numbers (absolute and relative).
-set list listchars=tab:»·,trail:·,nbsp:·                                      " Show extra whitespace.
+set list listchars=tab:»\ ,trail:·,nbsp:·                                     " Show extra whitespace.
 set splitright                                                                " Always split to the right and bottom.
 set textwidth=80
 set colorcolumn=80
@@ -101,6 +109,7 @@ nnoremap <leader><leader> <c-^>
 " Normal Mode
 nnoremap j gj
 nnoremap k gk
+nmap <F2> <Plug>(coc-rename)
 
 " Insert Mode
 inoremap jk <ESC>
@@ -146,6 +155,17 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+
+" --- ALE --- "
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'javascript': ['eslint'],
+\}
+let g:ale_sign_error = '🚨'
+let g:ale_sign_warning = '⚠'
+let g:ale_fix_on_save = 1
+
 
 " ===== AUTOCOMMANDS ===== "
 augroup vimrcEx
