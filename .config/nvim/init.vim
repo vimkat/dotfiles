@@ -21,9 +21,11 @@ Plug 'vim-airline/vim-airline-themes'                                         " 
 
 " Utility features
 Plug 'scrooloose/nerdtree'                                                    " NERDTree file viewer
-Plug 'ctrlpvim/ctrlp.vim'                                                     " FuzzyFinder
 Plug 'tpope/vim-fugitive'                                                     " GIT wrapper
+Plug 'airblade/vim-gitgutter'                                                 " MOAR awesome Git tools (who doesn't want that, right?)
 Plug 'christoomey/vim-tmux-navigator'                                         " Navigate tmux and vim panes more easily
+Plug '/usr/local/opt/fzf'                                                     " Fuzzy finder binary
+Plug 'junegunn/fzf.vim'                                                       " Fuzzy finder vim bindings
 
 " Editing features
 Plug 'easymotion/vim-easymotion'                                              " VIM EasyMotion
@@ -52,7 +54,7 @@ set ignorecase                                                                " 
 set number relativenumber                                                     " Show line numbers (absolute and relative).
 set list listchars=tab:»\ ,trail:·,nbsp:·                                     " Show extra whitespace.
 set splitright                                                                " Always split to the right and bottom.
-set textwidth=80
+set textwidth=80  " FIXME
 set colorcolumn=80
 
 
@@ -140,6 +142,14 @@ let g:airline_right_sep = ' '
 set noshowmode                                                                " Remove default mode indicator.
 
 
+" --- FZF.VIM --- "
+nnoremap <C-p> :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>t :BTags<CR>
+nnoremap <Leader>T :Tags<CR>
+
+
 " --- CoC --- "
 set hidden
 set cmdheight=2
@@ -168,15 +178,24 @@ let g:ale_fix_on_save = 1
 
 
 " ===== AUTOCOMMANDS ===== "
-augroup vimrcEx
-  " Automatically wrap at 100 characters and spell check markdown files.
-  autocmd FileType markdown setlocal spell
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+if has('autocmd')
+  augroup vimrcEx
+    " Automatically wrap at 100 characters and spell check markdown files.
+    autocmd FileType markdown setlocal spell
+    autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
-  " Automatically wrap at 100 characters and spell check git commit messages.
-  autocmd FileType gitcommit setlocal textwidth=80
-  autocmd FileType gitcommit setlocal spell
-augroup END
+    " Automatically wrap at 100 characters and spell check git commit messages.
+    autocmd FileType gitcommit setlocal textwidth=80
+    autocmd FileType gitcommit setlocal spell
+  augroup END
+
+  " Automatically source $MYVIMRC on save.
+  augroup reload_vimrc
+    autocmd!
+    autocmd! BufWritePost $MYVIMRC,$MYGVIMRC nested source %
+  augroup END
+endif
+
 
 
 " ===== Language Settings ===== "
@@ -184,4 +203,3 @@ augroup END
 " --- Golang --- "
 let g:go_fmt_command = "goimports"                                            " Have vim-go automatically import and format on save
 let g:go_def_mapping_enabled = 0                                              " Let CoC handle :GoDef (gd)
-
