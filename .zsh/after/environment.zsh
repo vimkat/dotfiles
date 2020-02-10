@@ -1,5 +1,6 @@
 # ===== General Terminal Experience ===== #
 export CDPATH=$HOME/Developer/repositories
+export EDITOR="nvim"
 
 
 # ===== Golang ===== #
